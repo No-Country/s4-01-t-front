@@ -1,5 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.App {
+  font-family: lexend-regular;
+  min-width: 350px;
+}
+
+@font-face {
+  font-family: "lexend-regular";
+  src: url("./fonts/Lexend-Regular.ttf");
+}
+
+@font-face {
+  font-family: "lexend-bold";
+  src: url("./fonts/Lexend-Bold.ttf");
 }
