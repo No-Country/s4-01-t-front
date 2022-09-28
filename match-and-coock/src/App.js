@@ -1,10 +1,12 @@
 
 import './App.css';
 
+import SwipeContainer from './pages/SwipeContainer';
+
 function App() {
   return (
     <div className="App">
-      <h2>Hola</h2>
+      <SwipeContainer/>     
     </div>
   );
 }

@@ -1,0 +1,54 @@
+.menuCards{
+    
+    text-align:center;
+    /* border:3px solid red; */
+    padding:2%;  
+    border: 2px black solid; 
+    background-color: aqua;
+    margin: 2%;
+    
+    
+    
+  
+    
+}
+
+
+
+.tagText{
+    background-color: blue;
+    width: fit-content;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    font-size: small;
+    color: yellow;
+    border-radius: 0.5em;
+}
+
+.tagAndTimeContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.cardBody{
+    text-align: start;
+    font-weight: 300;
+    color: black;
+    font-size: larger;
+  
+}
+
+
+.coockingTime{
+    border:2px black solid;
+    
+    width: fit-content;
+}
+
+
+
+
+
+
