@@ -38,6 +38,7 @@ function SwipeScreen() {
         <Container  className={styles.viewContainer}>                
                 <h2 className={styles.viewTitle}>Deslizá y matcheá</h2>                
             
+            <CardWithMenu/>
 
             <FilterButton/> 
         </Container>
