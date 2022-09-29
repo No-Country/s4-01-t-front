@@ -1,19 +1,42 @@
-.menuCards{
+
+
+.viewTitle{
+    text-align: center;
+    width:100%;
+    font-size: 1.4em;
+    margin-top: 2%;
+}
+
+.viewContainer{
+   margin-top: 3%;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.titleAndButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card{
+    border:3px solid black;
     
+}
+
+
+.menuCards{    
     text-align:center;
     /* border:3px solid red; */
     padding:2%;  
     border: 2px black solid; 
     background-color: aqua;
-    margin: 2%;
-    
-    
-    
-  
-    
+    margin: 2%;    
 }
-
-
 
 .tagText{
     background-color: blue;
@@ -36,17 +59,34 @@
     text-align: start;
     font-weight: 300;
     color: black;
-    font-size: larger;
-  
+    font-size: larger;  
 }
 
 
 .coockingTime{
-    border:2px black solid;
-    
+    border:2px black solid;    
     width: fit-content;
 }
 
+
+
+.filterButton{
+    
+    margin: 4%;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 45px;
+    background-color: #ffffff;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    font-size: medium;
+    
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;     
+}
 
 
 

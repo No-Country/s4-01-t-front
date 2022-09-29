@@ -5,7 +5,57 @@ import MenuCard from '../components/card/MenuCard';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import styles from '../styles/cardsContainer.module.css'
+import styles from '../styles/cardsContainer.module.css';
+import FilterButton from '../components/buttons/FilterButton';
+
+import CardWithMenu from '../components/card/CardWithMenu';
+
+
+
+
+function SwipeScreen() {
+
+    const characters = db
+    const [lastDirection, setLastDirection] = useState()
+
+    const swiped = (direction, nameToDelete) => {
+        console.log('removing: ' + nameToDelete)
+        setLastDirection(direction)
+    }
+
+    const outOfFrame = (name) => {
+        console.log(name + ' left the screen!')
+    }
+
+
+    return (
+
+    <>
+        <Container>
+            <header style={{ backgroundColor: 'red', textAlign: 'center' }}>Header</header>
+        </Container>  
+
+        <Container  className={styles.viewContainer}>                
+                <h2 className={styles.viewTitle}>Deslizá y matcheá</h2>                
+            
+
+            <FilterButton/> 
+        </Container>
+
+
+        
+
+    </>
+
+
+
+
+
+        
+    )
+}
+
+
 
 
 
@@ -54,7 +104,7 @@ function SwipeContainer() {
 
 
             {characters.map((character) =>
-                <Container className={styles.SwipeContainer} style={{backgroundColor:'red'}}>
+                <Container className={styles.SwipeContainer} style={{ backgroundColor: 'red' }}>
 
                     <Row>
 
@@ -77,4 +127,4 @@ function SwipeContainer() {
     )
 }
 
-export default SwipeContainer
+export default SwipeScreen

@@ -2,7 +2,8 @@ import React from "react";
 import styles from '../../styles/cardsContainer.module.css'
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-
+import clock from '../../assets/Outline.png';
+import Image from 'react-bootstrap/Image'
 
 import MenuImg from '../../assets/menu.png';
 
@@ -20,7 +21,9 @@ function MenuCard(props) {
             <Card.Title>{props.title}</Card.Title>
             <Container className={styles.tagAndTimeContainer}>
               <Container className={styles.tagText}>Menu Type</Container>
-              <Container className={styles.coockingTime}></Container>
+              <Container className={styles.coockingTime}>
+                <Image src={clock}/> 60´
+              </Container>
             </Container>
 
 
