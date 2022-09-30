@@ -40,7 +40,7 @@ const Cover = () => {
                         
                             <div className="form-group w-100">
                                 <Link to={"/login"} className=''>
-                                    <button type="submit" className=" btn btn-gradient rounded-pill  border-field box-shadow w-100">
+                                    <button type="submit" className=" btn btn-gradient border-field box-shadow w-100">
                                         Ingresar
                                     </button>
                                 </Link>
@@ -50,7 +50,7 @@ const Cover = () => {
                         {/*Registrar*/}
                         <div className="form-group w-100">
                             <Link to={"/register"} className=''>
-                                <button type="submit" className=" btn btn btn-outline-light rounded-pill  border-field box-shadow w-100">
+                                <button type="submit" className=" btn btn btn-outline-light rounded-30 border-field  w-100">
                                     Registrarse
                                 </button>
                             </Link>

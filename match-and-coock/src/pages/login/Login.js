@@ -67,7 +67,7 @@ class Login extends Component
             <Form>
             <div className="form-group mb-4">
                 <label htmlFor="email"> Correo eletronico </label>
-                <Field name="email" type="email" className="form-control rounded-pill gry form-field" placeholder="Ingresá tu correo electrónico" pattern='.' />
+                <Field name="email" type="email" className="form-control form-field" placeholder="Ingresá tu correo electrónico" />
                 <ErrorMessage
                   name="email"
                   component="div"
@@ -79,7 +79,7 @@ class Login extends Component
                 <Field
                   name="password"
                   type="password"
-                  className="form-control rounded-pill gry form-field" placeholder="Ingresá tu contraseña" pattern='.'
+                  className="form-control  form-field" placeholder="Ingresá tu contraseña"
                 />
                 <ErrorMessage
                   name="password"
