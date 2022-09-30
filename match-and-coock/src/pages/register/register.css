@@ -1,0 +1,43 @@
+.title {
+    font-size: 1.2rem;
+    
+
+}
+.box-title {
+    margin-bottom: 4.25rem;
+    
+}
+.focus:focus{border-color: #000;}
+
+.btn-gradient{ 
+    background: linear-gradient(91.15deg, #FA7A70 0%, #CB3125 0.01%, #9B241B 99.8%);
+    color: rgba(235, 146, 139, 0.47) ;
+}
+button[type="submit"] {
+    color:  #F8F8F8;
+}
+button[type="submit"]:hover {
+    color:  #F8F8F8;
+}
+.flex-btn {
+    display: flex;
+    flex-direction: column;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.form-field {
+    font-size: 13px;
+    background-color: rgba(248, 248, 248, 1);
+    border: none;
+}
+
+.form-field:valid {
+    color: black;
+    border: black solid 1px;
+}
+
+.form-group label {
+    font-size: 0.625rem;
+}

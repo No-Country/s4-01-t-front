@@ -5,6 +5,8 @@ import { useFetch } from "../../hooks/useFetch";
 import recipeImg from "../../assets/images/mock_recipe.svg";
 import headerImg from "./../../assets/images/headerFood.svg";
 import styles from "./home.module.css";
+import { Link } from "react-router-dom";
+
 const {
   container,
   header,
@@ -30,10 +32,12 @@ export const Home = () => {
         <picture>
           <img src={headerImg} alt="match-menu" />
         </picture>
-
-        <a href="#" className={link}>
-          ¡Probalo acá!
-        </a>
+        
+          <a href="#" className={link}>
+            ¡Probalo acá!
+          </a>
+        
+        
       </section>
 
       <section className={section_container}>
