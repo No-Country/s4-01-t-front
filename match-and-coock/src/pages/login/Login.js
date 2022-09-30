@@ -45,11 +45,12 @@ class Login extends Component
         return (
             <div>
             <div className="head ms-4 mt-4">
-            <Link to={"/login"} className=''></Link>
-            <IconContext.Provider  value={{ size: "2rem"}} >
-              <IoArrowBackCircleOutline></IoArrowBackCircleOutline>
-              
+            <Link to={"/cover"} className='text-black'>
+              <IconContext.Provider  value={{ size: "2rem"}} >
+                <IoArrowBackCircleOutline></IoArrowBackCircleOutline>
+                
               </IconContext.Provider>
+            </Link>
            
             </div>
             <div className="m-4">
