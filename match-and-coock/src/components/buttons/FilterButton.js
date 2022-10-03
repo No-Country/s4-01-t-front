@@ -1,11 +1,14 @@
 import React from "react";
-import styles from '../../styles/cardsContainer.module.css';
-import filter from '../../assets/filter.png';
 
+import filter from '../../assets/filter.png';
+import styles from './filterButton.module.css';
+
+
+const {filterButton} = styles
 
 function FilterButton(){
     return(
-        <button className={styles.filterButton}>
+        <button className={filterButton}>
             <img src={filter} alt='filter'/>
             <p>Filtrar</p>
         </button> 

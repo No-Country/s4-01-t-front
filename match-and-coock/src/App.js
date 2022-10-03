@@ -1,11 +1,11 @@
 import "./App.css";
 import { Home } from "./pages/home/Home";
-import SwipeContainer from '../src/pages/SwipeContainer'
+import SwipeScreen from "./pages/swipe/SwipeScreen";
 
 function App() {
   return (
     <div className="App">
-      <SwipeContainer/>
+      <SwipeScreen/>
 
       {/* <Home /> */}
     </div>

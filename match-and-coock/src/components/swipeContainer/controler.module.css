@@ -1,0 +1,31 @@
+.controler {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    
+}
+
+.redCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    
+    background: linear-gradient(133.32deg, #CB3125 8.25%, #9B241B 86.94%);
+
+}
+
+.blackCircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    margin-right: 3%;
+    
+    background: linear-gradient(135deg, #525252 0%, #000000 100%);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
