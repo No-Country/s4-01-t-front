@@ -3,7 +3,7 @@ import { instance } from "../axios/axiosConfig";
 
 const initialState = null;
 
-const authReducer = createSlice({
+const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
@@ -18,7 +18,7 @@ const authReducer = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { login, logout } = authReducer.actions;
+export const { login, logout } = authSlice.actions;
 
 export const loginAction = (email, password, functAlert) => (dispatch) => {
   instance
@@ -49,4 +49,4 @@ const registerAction = (data) => (dispatch) => {
     });
 };
 
-export default authReducer.reducer;
+export default authSlice.reducer;
