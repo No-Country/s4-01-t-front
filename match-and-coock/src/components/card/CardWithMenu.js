@@ -6,7 +6,7 @@ import MenuImg from '../../assets/menu1.png';
 import Container from "react-bootstrap/esm/Container";
 import clocks from '../../assets/Outline.png';
 
-const { card, tagText, coockingTime, tagAndTimeContainer, menuInfo, menuTitle } = styles
+const { card, tagText, coockingTime, tagAndTimeContainer, menuInfo, menuTitle } = styles;
 
 
 
@@ -15,11 +15,11 @@ function CardWithMenu(props) {
         <div className={card}>
             <Image src={MenuImg} />
             <div className= {menuInfo} >
-                <h4 className={menuTitle}>Lasagna de berenjenas</h4>
+                <h4 className={menuTitle}>{props.title}</h4>
                 <Container className={tagAndTimeContainer}>
-                    <p className={tagText}>Vegetariano</p>
+                    <p className={tagText}>{props.menuType}</p>
                     <Container className={coockingTime}>
-                        <Image src={clocks}/> 45' 
+                        <Image src={clocks}/> {props.time}' 
                     </Container>
                 </Container>
 
