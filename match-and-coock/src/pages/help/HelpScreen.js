@@ -6,7 +6,7 @@ import step2 from '../../assets/helpScreen/step2.png';
 import styles from './helpScreen.module.css';
 
 
-const {helpScreen, stepsImage, viewTitle, paragraph} = styles;
+const {helpScreen, stepsImage, viewTitle, paragraph, list} = styles;
 
 function HelpScreen() {
     return (
@@ -20,9 +20,9 @@ function HelpScreen() {
 
             <Container>
                 <p className={paragraph}>Existen dos formas de matchear con tu receta:</p>
-                <ol>
-                    <li>1. Podes deslizar la tarjeta hacia la derecha para matchear</li>
-                    <li>2. O apretar en el botón ♥ rojo.</li>
+                <ol className={list}>
+                    <li>Podes deslizar la tarjeta hacia la derecha para matchear</li>
+                    <li>O apretar en el botón ♥ rojo.</li>
                 </ol>
                 <Image src={step1} className={stepsImage}/>
             </Container>
