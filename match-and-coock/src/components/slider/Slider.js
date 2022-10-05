@@ -30,6 +30,8 @@ export const Slider = ({ data }) => {
       preventClicks={true}
     >
       {data.map((el) => {
+        console.log(el)
+
         return (
           <SwiperSlide key={el.id} className={slide}>
             <img src={el.image} alt="food" className={img + " swiper-lazy"} />
