@@ -5,7 +5,7 @@ import SwipeScreen from "./pages/swipe/SwipeScreen";
 function App() {
   return (
     <div className="App">
-      <SwipeScreen/>
+      <SwipeScreen />
 
       {/* <Home /> */}
     </div>
