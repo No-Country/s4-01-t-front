@@ -4,8 +4,8 @@
 
 }
 .box-title {
-    margin-bottom: 4.25rem;
-    margin-top: 6rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 .focus:focus{border-color: #000;}
 
@@ -59,4 +59,26 @@ button[type="submit"]:hover {
 
 .form-group label {
     font-size: 0.625rem;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.pl-r-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (min-width: 768px) {
+    .layout {
+        margin: auto;
+        width: 50%;
+        -webkit-box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
+        box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
+        margin-top: 4rem;
+    }
+    
 }

@@ -1,9 +1,25 @@
+.background {
+    min-height: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    overflow: hidden;
+}
+
+
 .text-white {
     color: white;
 }
-.content-cover {
-    max-width: 420px;
-    height: 100vh;
+.container-cover {
+   
+  width: 100vw;
+  height: 100vh;
+}
+.container-sm {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .bg-image{
@@ -12,7 +28,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-    max-height: 100vh;
+    width: 100vw;
 }
 .mask {
     background-color: rgba(0, 0, 0, 0.6);
@@ -21,7 +37,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow: hidden;
     background-attachment: fixed;
@@ -31,12 +47,22 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
+    
     
 }
 .mask-content-top {
     display: flex;
     justify-content: space-between;
+    padding: 30px;
+}
+
+.mask-content-btn {
+    padding: 0 30px;
+}
+
+.mw-1 {
+    max-width: 400px;
 }
 
 .flex-center {
@@ -46,11 +72,9 @@
     align-items: center;
 
 }
-.mb-6 {
-    margin-bottom: 6rem;;
-}
-.none {
-    opacity: 0;
+
+.visibility {
+   visibility: hidden;
 }
 .btn-gradient{ 
     background: linear-gradient(91.15deg, #FA7A70 0%, #CB3125 0.01%, #9B241B 99.8%);
@@ -69,4 +93,31 @@
     padding-bottom: 10px;
     font-size: 1.2rem;
     font-weight: 700;
+}
+.bg-100vh {
+height: 100vh;
+}
+#layout {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    #layout {
+        margin: auto;
+        width: 50%;
+        -webkit-box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
+        box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
+        margin-top: 4rem;
+        
+    }
+    .md-bg-clear {
+        background-image: none!important;
+        background: transparent;
+    }
+
+    .background, .mask-content {
+        min-height: 380px;
+        height: 380px;
+    }
 }

@@ -1,4 +1,7 @@
 import axios from "axios";
+import {
+  REGISTER_SUCCESS
+} from "../actions/types";
 
 const API_URL = "http://localhost:8080/api/auth/";
 
@@ -19,12 +22,16 @@ class AuthService {
     localStorage.removeItem("user");
   }
 
-  register(username, email, password) {
-    return axios.post(API_URL + "signup", {
-      username,
-      email,
-      password,
-    });
+  register(fullname, username, email, password) {
+    // Mock de la peticion
+    return Promise.resolve({type:REGISTER_SUCCESS});
+    
+    // return axios.post(API_URL + "signup", {
+    //   fullname,
+    //   username,
+    //   email,
+    //   password,
+    // });
   }
 }
 
