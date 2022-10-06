@@ -1,0 +1,64 @@
+{
+  "menues": [
+    {
+      "menuTitle": "Lasagna de berenjena",
+      "menuType": "Vegetariano",
+      "time": "45",
+      "id": 1
+    },
+    {
+      "menuTitle": "Fondue de calabaza",
+      "menuType": "Salado",
+      "time": "85",
+      "id": 2
+    },
+    {
+      "menuTitle": "Lasagna de berenjena",
+      "menuType": "Vegetariano",
+      "time": "45",
+      "id": 3
+    },
+    {
+      "menuTitle": "Nuggets de pollo",
+      "menuType": "Salado",
+      "time": "45",
+      "id": 4
+    },
+    {
+      "menuTitle": "Hamburguesas veganas",
+      "menuType": "Sin TACC",
+      "time": "120",
+      "id": 5
+    },
+    {
+      "menuTitle": "Tarta",
+      "menuType": "Vegetariano",
+      "time": "43",
+      "id": 6
+    },
+    {
+      "menuTitle": "Asado",
+      "menuType": "Salado",
+      "time": "85",
+      "id": 7
+    },
+    {
+      "menuTitle": "jamon",
+      "menuType": "Vegetariano",
+      "time": "64",
+      "id": 8
+    },
+    {
+      "menuTitle": "tortilla",
+      "menuType": "Salado",
+      "time": "63",
+      "id": 9
+    },
+    {
+      "menuTitle": "fideos",
+      "menuType": "Sin TACC",
+      "time": "120",
+      "id": 10
+    }
+  ]
+}

@@ -1,13 +1,10 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import { Home } from "./pages/home/Home";
-import SwipeScreen from "./pages/swipe/SwipeScreen";
 
 function App() {
   return (
     <div className="App">
-      <SwipeScreen />
-
-      {/* <Home /> */}
+      <Outlet />
     </div>
   );
 }
