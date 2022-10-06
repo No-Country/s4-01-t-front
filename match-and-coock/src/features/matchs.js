@@ -5,9 +5,11 @@ const matchSlice = createSlice({
   name: "matchs",
   initialState: [],
   reducers: {
-    add: (state, action) => {
-      // state.push(action.payload)
-      return action.payload;
+    addMatch: (state, action) => {
+      state.push(action.payload);
+
+      //return action.payload;
+      //retornar el comentado si recibimos el array
     },
     remove: (state, action) => {
       /* const id = action.payload;
@@ -21,7 +23,7 @@ const matchSlice = createSlice({
   },
 });
 
-export const { add, remove } = matchSlice.actions;
+export const { addMatch, remove } = matchSlice.actions;
 
 //HAY QUE VER SI ACTUALIZAMOS REDUX CON LA LISTA ACTUALIZADA QUE DEVUELVE EL BACK O SIMPLEMENTE PUSHEAMOS AL ESTADO LA RECETA NUEVA, YA QUE NO HABRÍA DIFERENCIA. (capaz mejor pushear de a una, pero vemos)
 
@@ -30,7 +32,7 @@ export const addMatchAction = (id_user, id_receta) => (dispatch) => {
     .post("/addFav", { id_user, id_receta })
     .then(({ data }) => {
       //Recibimos la lista actualizada
-      dispatch(add(data));
+      dispatch(addMatch(data));
     })
     .catch((err) => console.error(err));
 };
