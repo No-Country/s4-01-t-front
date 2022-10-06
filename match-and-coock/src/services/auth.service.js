@@ -23,15 +23,12 @@ class AuthService {
   }
 
   register(fullname, username, email, password) {
-    // Mock de la peticion
-    return Promise.resolve({type:REGISTER_SUCCESS});
-    
-    // return axios.post(API_URL + "signup", {
-    //   fullname,
-    //   username,
-    //   email,
-    //   password,
-    // });
+    return axios.post(API_URL + "signup", {
+      fullname,
+      username,
+      email,
+      password,
+    });
   }
 }
 

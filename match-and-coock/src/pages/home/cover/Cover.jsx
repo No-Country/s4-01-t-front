@@ -7,7 +7,7 @@ import  CoverFoto from  "./Images/cover.png";
 import Logo from "./Images/Logo.png"
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const Cover = () => {
@@ -45,21 +45,21 @@ const Cover = () => {
                             <div className='mask-content-btn flex-center'>
                                 {/*Ingresar*/}
                                 <div className="form-group w-100 mw-1">
-                                    <Link to={"/login"} className=''>
+                                    {/* <Link to={"/login"} className=''> */}
                                         <button type="submit" className=" btn btn-gradient border-field box-shadow w-100">
                                             Ingresar
                                         </button>
-                                    </Link>
+                                    {/* </Link> */}
                                 </div>
                         
                                 <p className='text-white mb-2 mt-2'> o </p>
                                 {/*Registrar*/}
                                 <div className="form-group w-100 mw-1">
-                                    <Link to={"/register"} className=''>
+                                    {/* <Link to={"/register"} className=''> */}
                                         <button type="submit" className=" btn btn btn-outline-light rounded-30 border-field w-100">
                                             Registrarse
                                         </button>
-                                    </Link>
+                                    {/* </Link> */}
                                 </div>
                             </div>
                         </div>

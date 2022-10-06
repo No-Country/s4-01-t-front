@@ -6,8 +6,6 @@ import "./register.css";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import { Link, redirect } from "react-router-dom";
-import { register } from '../../actions/auth';
-import { connect } from "react-redux";
 
 
 class Register extends Component
@@ -110,32 +108,6 @@ class Register extends Component
       this.setState({
         successful: false,
       });
-      console.log(register(this.state.fullname, this.state.username, this.state.email, this.state.password));
-      
-      this.props
-        .dispatch( //guardo al store
-          register(this.state.fullname, this.state.username, this.state.email, this.state.password)
-        )
-        .then(() => {
-          console.log('Success')
-          this.setState({
-            successful: true,
-          });
-
-          console.log(this.state.successful);
-          if (this.state.successful) {
-            redirect('/home');
-          }
-          console.log('Chunca !!! ');
-          redirect('/home');
-
-        })
-        .catch(() => {
-          this.setState({
-            successful: false,
-          });
-        });
-      
         
     }
 
@@ -145,13 +117,13 @@ class Register extends Component
           <div className="layout">
           <div className="d-flex flex-column ">
             <div className="head ms-4 mt-4">
-              <Link to="/cover" className="text-black">
+              {/* <Link to="/cover" className="text-black"> */}
                 <IconContext.Provider value={{size: "2rem"}}>
                   <div>
                     <IoArrowBackCircleOutline />
                   </div>
                 </IconContext.Provider>
-              </Link>
+              {/* </Link> */}
             </div>
             <div className="register-form">
               <div className="box-title pl-r-30">
@@ -280,11 +252,4 @@ class Register extends Component
     }
 }
 
-function mapStateToProps(state) {
-  const { message } = state.message;
-  return {
-    message,
-  };
-}
-
-export default connect(mapStateToProps)(Register);
+export default Register;

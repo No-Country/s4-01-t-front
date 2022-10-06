@@ -1,0 +1,23 @@
+.helpScreen{
+    
+    margin:  3%;
+}
+
+.stepsImage{
+    margin:2%
+}
+
+.viewTitle{
+    margin-bottom: 3%;
+    font-weight: 700;
+}
+
+.paragraph{
+    margin:2%;
+    font-weight: 400;
+}
+
+.list{
+    margin-left: 5%;
+    font-weight: 400;
+}

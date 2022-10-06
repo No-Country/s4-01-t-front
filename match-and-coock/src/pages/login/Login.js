@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./login.css";
-import { login } from '../../actions/auth';
 
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
@@ -54,21 +53,6 @@ class Login extends Component
         successful: false,
       });
       
-      this.props
-        .dispatch(
-          login(this.state.email, this.state.password)
-        )
-        .then(() => {
-          this.setState({
-            successful: true,
-          });
-        })
-        .catch(() => {
-          this.setState({
-            successful: false,
-          });
-        });
-      
       if (this.state.successful) {
         redirect('/home');
       }
@@ -81,11 +65,11 @@ class Login extends Component
           <div className="layout">
           <div className="d-flex flex-column">
             <div className="head ms-4 mt-4">
-              <Link to="/cover" className="text-black">
+              {/* <Link to="/cover" className="text-black"> */}
                 <IconContext.Provider value={{size: "2rem"}}>
                   <IoArrowBackCircleOutline />
                 </IconContext.Provider>
-              </Link>
+              {/* </Link> */}
         
             </div>
             <div className="login-form">
