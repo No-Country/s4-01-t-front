@@ -1,20 +1,15 @@
 import "./App.css";
-import { Home } from "./pages/home/Home";
-import Register from "./pages/register/Register";
-import Login from "./pages/Login/Login";
-import Cover from "./pages/home/cover/Cover";
 
+import Register from "./pages/register/Register";
 
 function App() {
-  
   return (
     <div className="App">
       {/* <Cover/> */}
       {/* <Login/> */}
-      <Register/>
+      <Register />
     </div>
   );
 }
-
 
 export default App;
