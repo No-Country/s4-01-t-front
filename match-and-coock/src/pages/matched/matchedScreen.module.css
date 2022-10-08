@@ -1,0 +1,15 @@
+.styledScreen{
+    display: flex;
+    flex-direction: column;
+    
+    width: 95%;
+    margin: 2.5% 2.5% 2% 2.5%;
+    text-align: start;
+}
+
+.styledTitle{
+    font-weight: 700;
+    line-height: 20px;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+}
