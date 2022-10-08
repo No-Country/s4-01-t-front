@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import styles from "./swipeScreen.module.css";
 import data from "../../mockMenues.json";
-
 import SwipeContainer from "../../components/swipeContainer/SwipeContainer";
 
 const { viewTitle } = styles;

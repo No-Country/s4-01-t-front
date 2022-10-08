@@ -3,6 +3,8 @@
     position: relative;
     height: 320px;
     width: 330px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .tagText {
