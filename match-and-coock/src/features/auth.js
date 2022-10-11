@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 import { instance } from "../axios/axiosConfig";
 
 const initialState = null;
@@ -20,7 +21,9 @@ const authSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { login, logout } = authSlice.actions;
 
-export const loginAction = (email, password, functAlert) => (dispatch) => {
+export const loginAction = (email, password, getStatus) => (dispatch) => {
+  console.log({ email, password });
+
   instance
     .post("/login", {
       //completar con el path correspondiente
@@ -29,14 +32,17 @@ export const loginAction = (email, password, functAlert) => (dispatch) => {
     })
     .then(({ data }) => {
       dispatch(data);
+      getStatus(true);
     })
     .catch((err) => {
       //podemos lanzar alerta (sweatAlert2) o recibir una funcion para actualizar el estado de errores del formulario y así mostrarlo en ese componente.
+      console.log(err);
       console.error(err);
+      getStatus(false, err.message);
     });
 };
 
-const registerAction = (data) => (dispatch) => {
+const registerAction = (data) => async (dispatch) => {
   instance
     .post("/register", data)
     .then(({ data }) => {
@@ -44,7 +50,7 @@ const registerAction = (data) => (dispatch) => {
       console.log(data);
     })
     .catch((error) => {
-      console.error(error);
+      /*  console.error(error); */
       //PODEMOS RECIBIR APARTE DE DATA, UNA FUNCION PARA MOSTRAR EL ERROR EN LA VISTA DE REGISTRO.
     });
 };

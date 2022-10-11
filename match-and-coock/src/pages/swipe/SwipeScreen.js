@@ -11,12 +11,6 @@ function SwipeScreen() {
 
   return (
     <>
-      <Container>
-        <header style={{ backgroundColor: "red", textAlign: "center" }}>
-          Header
-        </header>
-      </Container>
-
       <h2 className={viewTitle}>Deslizá y matcheá</h2>
 
       <div
