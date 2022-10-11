@@ -1,9 +1,7 @@
 import React from "react";
 import { Slider } from "../../components/slider/Slider";
-import { useFetch } from "../../hooks/useFetch";
-
 import recipeImg from "../../assets/images/mock_recipe.svg";
-import headerImg from "./../../assets/images/headerFood.svg";
+import headerImg from "./../../assets/images/logo-photoshop.svg";
 import styles from "./home.module.css";
 import { Link } from "react-router-dom";
 
@@ -16,11 +14,10 @@ const {
   h3,
   section_container,
   recipe_day,
+  img_header,
 } = styles;
 
-export const Home = () => {
-  const { loading, state } = useFetch("/food");
-
+export const Home = ({ stateSwipe, loadingSwipe }) => {
   return (
     <main className={container}>
       <h1 className={title}>Matcheá con tu próxima comida</h1>
@@ -30,24 +27,22 @@ export const Home = () => {
       </h2>
       <section className={header}>
         <picture>
-          <img src={headerImg} alt="match-menu" />
+          <img src={headerImg} alt="match-menu" className={img_header} />
         </picture>
-        
-          <a href="#" className={link}>
-            ¡Probalo acá!
-          </a>
-        
-        
+
+        <Link to={"swipe"} className={link}>
+          ¡Probalo acá!
+        </Link>
       </section>
 
       <section className={section_container}>
         <h3 className={h3}>Mejores Valoradas</h3>
-        {state?.length > 0 && <Slider data={state} />}
+        {stateSwipe?.length > 0 && <Slider data={stateSwipe} />}
       </section>
 
       <section className={section_container}>
         <h3 className={h3}>Descubrí nuevas recetas</h3>
-        {state?.length > 0 && <Slider data={state} />}
+        {stateSwipe?.length > 0 && <Slider data={stateSwipe} />}
       </section>
 
       <section className={section_container}>

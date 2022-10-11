@@ -1,13 +1,10 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-
-import Register from "./pages/register/Register";
 
 function App() {
   return (
     <div className="App">
-      {/* <Cover/> */}
-      {/* <Login/> */}
-      <Register />
+      <Outlet />
     </div>
   );
 }
