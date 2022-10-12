@@ -1,7 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "./cover.css";
 import CoverFoto from "./Images/cover.png";
 import Logo from "./Images/Logo.png";
@@ -27,7 +24,7 @@ const Cover = () => {
           <div id="container">
             <div className="mask-content pb-5">
               <div className="mask-content-top ">
-                <Link to={-1}>
+                <Link to={"/swipe"}>
                   <IconContext.Provider
                     value={{ size: "2rem", color: "#FFFFFF" }}
                   >

@@ -21,9 +21,7 @@ const authSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { login, logout } = authSlice.actions;
 
-export const loginAction = (email, password, getStatus) => (dispatch) => {
-  console.log({ email, password });
-
+export const loginAction = (email, password, getStatus) => async (dispatch) => {
   instance
     .post("/login", {
       //completar con el path correspondiente
@@ -42,7 +40,7 @@ export const loginAction = (email, password, getStatus) => (dispatch) => {
     });
 };
 
-const registerAction = (data) => async (dispatch) => {
+const registerAction = (data) => (dispatch) => {
   instance
     .post("/register", data)
     .then(({ data }) => {

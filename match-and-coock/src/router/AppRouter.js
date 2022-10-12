@@ -10,6 +10,7 @@ import { Auth } from "../pages/auth/Auth";
 import { Login2 } from "../pages/auth/login/Login2";
 import { Register2 } from "../pages/auth/register/Register2";
 import Cover from "../pages/home/cover/Cover";
+import { PrivatesPages } from "./Privates.js/PrivatesPages";
 // import your route components too
 
 export const AppRouter = () => {
@@ -21,8 +22,10 @@ export const AppRouter = () => {
         <Route path="/" element={<App />}>
           <Route index element={<Home stateSwipe={state} />} />
           <Route path="swipe" element={<SwipeScreen />} />
-          <Route path="matched" element={<MatchedScreen />} />
-          <Route path="liked" element={<LikedScreen />} />
+          <Route element={<PrivatesPages />}>
+            <Route path="matched" element={<MatchedScreen />} />
+            <Route path="liked" element={<LikedScreen />} />
+          </Route>
           <Route path="help" element={<HelpScreen />} />
           <Route path="auth/*" element={<Auth />}>
             <Route index element={<Cover />} />
@@ -30,6 +33,7 @@ export const AppRouter = () => {
             <Route path="register" element={<Register2 />} />
             <Route path="*" element={<Navigate to={-1} />} />
           </Route>
+          <Route path="*" element={<Navigate to={-1} />} />
         </Route>
       </Routes>
     </BrowserRouter>
