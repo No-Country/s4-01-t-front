@@ -1,10 +1,9 @@
 .card {
   border-radius: 20px;
-  position: relative;
-  height: 320px;
-  width: 330px;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  position: relative;  
+  width: 400px;
+  height: 390px;  
+  margin: 2%;
 }
 
 .tagText {
@@ -39,8 +38,8 @@
   height: 30%;
   padding: 8px;
   font-family: lexend-bold;
-  width: 330px;
-  height: 117px;
+  width: 100%;
+  
   bottom: 0;
   left: 0;
   border-radius: 0 0 20px 20px;
@@ -54,4 +53,18 @@
   font-weight: 700;
   margin-top: 0.3em;
   font-size: 22px;
+}
+
+.styledImage{
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 767px){
+  .card{
+    background-color: blue;
+    width: 320px;
+    height: 330px;
+  }
 }
