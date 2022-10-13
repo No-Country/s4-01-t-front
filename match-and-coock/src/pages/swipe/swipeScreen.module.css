@@ -1,4 +1,14 @@
 .viewTitle{
-    text-align: center;
+    align-self: flex-start;
     margin: 2%
 }
+
+.swipeAndLikes{
+    display: flex;       
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start
+
+}
+
+

@@ -69,12 +69,13 @@ function SwipeContainer({ menues }) {
   };
 
   return (
-    <div className={viewStyle}>
+    <div className={viewStyle} >
       {menues.map((menu, index) => (
-        <>
+        <div>
+
           <TinderCard
             ref={childRefs[index]}
-            className={positioned}
+            
             key={menu.id}
             onSwipe={(dir) => swiped(dir, menu.menuTitle, index)}
             onCardLeftScreen={() => outOfFrame(menu.menuTitle, index)}
@@ -86,11 +87,14 @@ function SwipeContainer({ menues }) {
               time={menu.time}
             />
           </TinderCard>
-          <Controler swipe={swipe} />
-        </>
+
+        </div>
+
+
       ))}
 
-      <FilterButton />
+        <Controler swipe={swipe} />
+        <FilterButton />
     </div>
   );
 }

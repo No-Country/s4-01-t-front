@@ -4,10 +4,10 @@ import CardWithMenu from '../card/CardWithMenu';
 import styles from './recipesGrid.module.css';
 import { useDispatch, useSelector } from "react-redux";
 import {getMatchs} from '../../features/matchs';
+import LikedCard from '.././likedCard/LikedCard';
 
 
-
-const { responsiveGrid } = styles;
+const { responsiveGrid , likedCard} = styles;
 
 
 
@@ -34,13 +34,13 @@ function RecipesGrid({ menues }) {
      {
         arrayMenues.map(menu => {
           return (
-            <div>
-              
-              <CardWithMenu
+            <div >              
+               <LikedCard
                 title={menu.menuTitle}
                 menuType={menu.menuType}
-                time={menu.time}
-              />
+                time={menu.time}                              
+              /> 
+              
             </div>)
 
         })
