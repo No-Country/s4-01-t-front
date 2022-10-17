@@ -1,0 +1,21 @@
+.btn-outline-light {
+    --bs-btn-hover-bg: transparent;
+}
+
+.text-black {
+    color:black!important;
+}
+
+.text-white {
+    color: white!important;
+}
+
+.white-to-black-md {
+    color:white;
+}
+
+@media only screen and (min-width: 767px) {
+    .white-to-black-md {
+        color:black!important;
+    }
+}

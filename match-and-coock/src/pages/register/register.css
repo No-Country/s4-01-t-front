@@ -1,13 +1,34 @@
-.title {
-    font-size: 1.375rem;
-    
-
+.background-transparent {
+    min-height: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-color: transparent;
+    background-blend-mode: multiply;
+    overflow: hidden;
+}
+.mask-content-btn {
+    overflow-y: scroll
 }
 .box-title {
     margin-bottom: 4rem;
     margin-top: 4rem;
 }
-.focus:focus{border-color: #000;}
+
+.container-sm {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.title {
+    font-size: 1.375rem;
+}
+
+
+
+.focus:focus {
+    border-color: #000;
+}
 
 .btn-gradient{ 
     background: linear-gradient(91.15deg, #FA7A70 0%, #CB3125 0.01%, #9B241B 99.8%);
@@ -20,16 +41,20 @@
     font-weight: 700;
     border-radius: 30px;
 }
-button[type="submit"] {
+
+/* button[type="submit"] {
     color:  #F8F8F8;
 }
+
 button[type="submit"]:hover {
     color:  #F8F8F8;
-}
+} */
+
 .flex-btn {
     display: flex;
     flex-direction: column;
 }
+
 .pointer {
     cursor: pointer;
 }
@@ -45,7 +70,6 @@ button[type="submit"]:hover {
 }
 
 .form-control:focus {
-   
     background-color:rgba(248, 248, 248, 1);
     border-color: rgba(0, 0, 0, 1);
     outline: 0;
@@ -63,22 +87,65 @@ button[type="submit"]:hover {
 
 .layout {
     display: flex;
-    flex-direction: column;
 }
 
-.pl-r-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+
+
+#background-large {
+    display: none;
 }
 
-@media (min-width: 768px) {
-    .layout {
-        margin: auto;
-        width: 50%;
-        -webkit-box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
-        -moz-box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
-        box-shadow: -2px 6px 20px -4px rgba(0,0,0,0.75);
-        margin-top: 4rem;
+@media only screen and (min-width: 767px) {
+
+    .not-in-pc {
+        display: none;
     }
-    
+
+    #layout, #container {
+        display: flex;
+    }
+
+    #background-large {
+        display: block;
+    }
+
+    #background-large, #background {
+        height:100vh;
+    }
+
+    #background, #container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #container {
+        width: 100%;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .md-bg-clear {
+        background-image: none!important;
+        background: transparent;
+    }
+
+    .background, .mask-content {
+        min-height: 380px;
+        height: 380px;
+    }
+
+    .mask-content-top .logo-container .logo{
+        display: none;
+    }
+
+    .mask-content-top .logo-container .logo-dark{
+        display: block;
+    }
+
+    .mask-content {
+        width: 100%;
+        height: 100%;
+    }
+
 }
