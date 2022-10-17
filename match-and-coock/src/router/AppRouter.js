@@ -1,19 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "../App";
-import  RecipesGrid  from "../components/recipesGrid/RecipesGrid";
 import { useFetch } from "../hooks/useFetch";
 import { Home } from "../pages/home/Home";
 import SwipeScreen from "../pages/swipe/SwipeScreen";
 import HelpScreen from "../pages/help/HelpScreen";
 import MatchedScreen from "../pages/matched/MatchedScreen";
 import LikedScreen from "../pages/liked/likedScreen";
+import { Auth } from "../pages/auth/Auth";
+import { Login2 } from "../pages/auth/login/Login2";
+import { Register2 } from "../pages/auth/register/Register2";
+import Cover from "../pages/home/cover/Cover";
+import { PrivatesPages } from "./Privates.js/PrivatesPages";
+import { Details } from "../pages/details/Details";
+import { useSelector } from "react-redux";
 // import your route components too
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
-import Cover from "../pages/home/cover/Cover"
+
 
 export const AppRouter = () => {
   const { loading, state } = useFetch("/food");
+  const user = useSelector((state) => state.auth);
+  console.log(user);
 
   return (
     <BrowserRouter>
@@ -21,9 +29,19 @@ export const AppRouter = () => {
         <Route path="/" element={<App />}>
           <Route index element={<Home stateSwipe={state} />} />
           <Route path="swipe" element={<SwipeScreen />} />
-          <Route path="matched" element={<MatchedScreen/>}/>
-          <Route path="liked" element={<LikedScreen/>} />
-          {/* <Route path="matchs" element={<RecipesGrid />} /> */}
+          <Route element={<PrivatesPages />}>
+            <Route path="matched" element={<MatchedScreen />} />
+            <Route path="liked" element={<LikedScreen />} />
+          </Route>
+          <Route
+            path="auth/*"
+            element={user === null ? <Auth /> : <Navigate replace to={"/"} />}
+          >
+            <Route index element={<Cover />} />
+            <Route path="login" element={<Login2 />} />
+            <Route path="register" element={<Register2 />} />
+            <Route path="*" element={<Navigate to={-1} />} />
+          </Route>
           <Route path="help" element={<HelpScreen />} />
           <Route path="cover" element={<Cover />} />
           <Route path="login" element={<Login />} />
@@ -33,3 +51,16 @@ export const AppRouter = () => {
     </BrowserRouter>
   );
 };
+
+/*  <Route path="/" element={<App />}>
+          <Route index element={<Home stateSwipe={state} />} />
+          <Route path="swipe" element={<SwipeScreen />} />
+          <Route path="matched" element={<MatchedScreen />} />
+          <Route path="liked" element={<LikedScreen />} />
+          <Route path="help" element={<HelpScreen />} />
+          <Route path="auth/*" element={<Auth />}>
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="*" element={<Navigate to={"login"} />} />
+          </Route>
+        </Route> */

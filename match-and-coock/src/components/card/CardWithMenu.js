@@ -21,12 +21,12 @@ function CardWithMenu(props) {
       <Image src={MenuImg} />
       <div className={menuInfo}>
         <h4 className={menuTitle}>{props.title}</h4>
-        <Container className={tagAndTimeContainer}>
+        <div className={tagAndTimeContainer}>
           <p className={tagText}>{props.menuType}</p>
-          <Container className={coockingTime}>
+          <div className={coockingTime}>
             <Image src={clocks} /> {props.time}'
-          </Container>
-        </Container>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -47,6 +47,11 @@
   box-shadow: 0px 2px 10px #9b241b;
 }
 
+.link:hover {
+  opacity: 0.9;
+  color: white !important;
+}
+
 .section_container {
   min-height: 290px;
   width: 100%;

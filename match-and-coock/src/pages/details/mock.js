@@ -1,0 +1,31 @@
+export const mock = {
+  img: "https://i.ytimg.com/vi/ZUjLPpfj3Q0/maxresdefault.jpg",
+  difficulty: "Avanzado",
+  preparation_time: "40",
+  title: "Lasagna de berenjenas",
+  creator: "Jorge Carrasca",
+  type_recipe: "Vegetariano",
+  ingredients: [
+    "2 berenjenas",
+    "1 cebolla chica",
+    "2 dientes de ajo",
+    "250 gr. de tomate triturado",
+    "Queso a gusto",
+    "Crema de leche (opcional)",
+    "1 cucharadita de azúcar",
+    "Albahaca",
+    "Sal",
+    "Pimienta",
+  ],
+  steps: [
+    "Lavar y cortar las berenjenas en láminas finas, luego dejarlas en reposo por 30 minutos con abundante sal.",
+    "En un sartén al fuego coloca aceite de oliva en la base y espera a que este tome calor. Ahora se incorporan los dientes de ajo picados junto con la cebolla picada en cuadraditos pequeños. Cocinar por 5 minutos.",
+    "Pasado el tiempo añadir 250 gr de tomate triturado junto con 1 cucharada de azúcar, sal al gusto, 1 cucharadita de orégano y 1 pizca de albahaca. Remover muy bien y cocinar por 10 minutos.",
+    "Volviendo a las berenjenas que deberán tener una capa superficial de líquido. Pasar cada una por debajo de un chorro de agua para limpiar la sal y por último secar cada una con servilletas de cocina.",
+    "Ahora hay que cocinar las berenjenas y se puede hacer de dos formas: freírlas en una sartén por 5 minutos de cada lado o llevarlas todas juntas a horno caliente por 10 minutos",
+    "Con las berenjenas ya cocidas y la salsa lista se procede al armado de la lasaña de berenjena. En un recipiente alto para horno colocar una base de salsa de tomate, por arriba ubicar las berenjenas y por último una capa de queso con un poco de albahaca. Repetir este proceso hasta utilizar todos los ingredientes.",
+    "Por arriba y para finalizar se puede agregar una última capa de crema de leche junto con queso para que gratine. Condimentar con sal y pimienta por arriba y llevar al horno por 20 minutos.",
+  ],
+  user_img:
+    "https://i0.wp.com/www.lacasadeel.net/wp-content/uploads/2022/05/Son-Goku-destacada.jpg",
+};

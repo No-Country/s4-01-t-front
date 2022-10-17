@@ -110,12 +110,6 @@ button[type="submit"]:hover {
     .cajas {
       width: 100%;
     }
-  } {
-    button[type="submit"].btn-outline-light {
-        color: #070707;
-        border-color: #070707;
-    }
-
     #background-large {
         display: block;
     }
