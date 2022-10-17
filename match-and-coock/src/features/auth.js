@@ -22,14 +22,16 @@ const authSlice = createSlice({
 export const { login, logout } = authSlice.actions;
 
 export const loginAction = (email, password, getStatus) => async (dispatch) => {
-  instance
+  dispatch(login({ email, password }));
+  getStatus(true);
+  /* instance
     .post("/login", {
       //completar con el path correspondiente
       email,
       password,
     })
     .then(({ data }) => {
-      dispatch(data);
+      dispatch(login(data));
       getStatus(true);
     })
     .catch((err) => {
@@ -37,7 +39,7 @@ export const loginAction = (email, password, getStatus) => async (dispatch) => {
       console.log(err);
       console.error(err);
       getStatus(false, err.message);
-    });
+    }); */
 };
 
 const registerAction = (data) => (dispatch) => {

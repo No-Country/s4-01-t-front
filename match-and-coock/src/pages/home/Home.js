@@ -20,6 +20,8 @@ const {
 export const Home = ({ stateSwipe, loadingSwipe }) => {
   return (
     <main className={container}>
+      <Link to="/auth">auth</Link>
+      <Link to="/matched">matchs</Link>
       <h1 className={title}>Matcheá con tu próxima comida</h1>
       <h2 className={subTitle}>
         ¿No sabés qué cocinar hoy? Nosotros te ayudamos a encontrar tu próxima

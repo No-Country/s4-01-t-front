@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.img_recipe {
+  width: 100%;
+}
+
+.resume_container {
+  margin: 2rem 0;
+  padding: 0 8%;
+  font-family: lexend-bold;
+}
+.resume_container h2 {
+  font-size: 22px;
+}
+.recipe_resume {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.recipe_resume p {
+  display: flex;
+  align-items: center;
+}
+
+.recipe_resume span {
+  margin: 0 4px;
+}
+
+.recipe_difficulty {
+  font-family: "lexend-regular";
+}
+.recipe_difficulty span {
+  font-family: "lexend-bold";
+}
+
+.recipe_type {
+  background-color: black;
+  color: white;
+  border-radius: 24px;
+  padding: 3px 8px;
+}

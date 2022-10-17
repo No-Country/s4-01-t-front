@@ -11,10 +11,14 @@ import { Login2 } from "../pages/auth/login/Login2";
 import { Register2 } from "../pages/auth/register/Register2";
 import Cover from "../pages/home/cover/Cover";
 import { PrivatesPages } from "./Privates.js/PrivatesPages";
+import { Details } from "../pages/details/Details";
+import { useSelector } from "react-redux";
 // import your route components too
 
 export const AppRouter = () => {
   const { loading, state } = useFetch("/food");
+  const user = useSelector((state) => state.auth);
+  console.log(user);
 
   return (
     <BrowserRouter>
@@ -26,13 +30,18 @@ export const AppRouter = () => {
             <Route path="matched" element={<MatchedScreen />} />
             <Route path="liked" element={<LikedScreen />} />
           </Route>
-          <Route path="help" element={<HelpScreen />} />
-          <Route path="auth/*" element={<Auth />}>
+          <Route
+            path="auth/*"
+            element={user === null ? <Auth /> : <Navigate replace to={"/"} />}
+          >
             <Route index element={<Cover />} />
             <Route path="login" element={<Login2 />} />
             <Route path="register" element={<Register2 />} />
             <Route path="*" element={<Navigate to={-1} />} />
           </Route>
+          <Route path="help" element={<HelpScreen />} />
+          <Route path="details" element={<Details />} />
+
           <Route path="*" element={<Navigate to={-1} />} />
         </Route>
       </Routes>
