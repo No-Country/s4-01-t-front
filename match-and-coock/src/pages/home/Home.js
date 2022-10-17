@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Slider } from "../../components/slider/Slider";
 import recipeImg from "../../assets/images/mock_recipe.svg";
 import headerImg from "./../../assets/images/logo-photoshop.svg";
@@ -19,9 +19,16 @@ const {
 } = styles;
 
 export const Home = ({ stateSwipe, loadingSwipe }) => {
+  // const [user, setUser] = useState(null);
+  const [user, setUser] = useState({'nombre':'Isa'});
+  // Enviar el usuario para loguear
+  const handdleLogin = () => {
+    setUser({'nombre':'Isa'});
+  }
+  
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar logged={user}></NavBar>
       <main className={container}>
         <h1 className={title}>Matcheá con tu próxima comida</h1>
         <h2 className={subTitle}>

@@ -14,8 +14,8 @@ import ButtonRegister from '../buttons/ButtonRegister/ButtonRegister';
 import ButtonLogin from '../buttons/ButtonLogin/ButtonLogin';
 
 
-const NavBar = () => {
-    const logged = false;
+const NavBar = ({logged}) => {
+    const className = logged ? '' : 'd-md-none';
   return (
     <div >
     <Navbar expand={false}>
@@ -23,7 +23,7 @@ const NavBar = () => {
         <Link>
             <Navbar.Brand to="/" ><img src={Logo} alt ="#"/></Navbar.Brand>
         </Link>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" className="d-md-none" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar" className={className} />
             <Navbar.Offcanvas  
                 id="offcanvasNavbar"  
                 aria-labelledby="offcanvasNavbarLabel"  
@@ -78,7 +78,7 @@ const NavBar = () => {
                                     <LinkContainer to="/login">
                                         <Nav.Link className="fw-bolder d-flex flex-row">
                                         <p className=''>Ingresar</p>
-                                        <span className= "ms-2"><img src={Save} alt="#"/></span>
+                                        <span className= "ms-2"><img src={User} alt="#"/></span>
                                         </Nav.Link>
                                     </LinkContainer>
                                     <LinkContainer to="/register">
@@ -91,12 +91,15 @@ const NavBar = () => {
                         </Nav>
                     </Offcanvas.Body>
             </Navbar.Offcanvas>
-      <div className='desktop-btns'>
-        <ButtonLogin />
-        <ButtonRegister />
-      </div>
+      {!logged && (
+        <>
+            <div className='desktop-btns'>
+                <ButtonLogin />
+                <ButtonRegister />
+            </div>
+        </>
+      )}
     </Container>
-     
     </Navbar>
     </div>
   )
