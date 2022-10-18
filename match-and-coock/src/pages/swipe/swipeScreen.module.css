@@ -1,14 +1,50 @@
-.viewTitle{
+.viewTitle {
+    margin-left: 2%;
+    margin-top: 0.5%;
+    margin-bottom: 2%;
     align-self: flex-start;
-    margin: 2%
+    width: max-content;
 }
 
-.swipeAndLikes{
-    display: flex;       
-    width: 100%;
-    justify-content: space-around;
-    align-items: flex-start
+.swipeAndLikes {
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin-left: 10%;
+}
+
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    align-self: center
+}
+
+.centerContent {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 10%;
+}
+
+
+.rightContent {
+    margin-top: 3%;
+    display: 'flex';
+    flex-direction: row;
+    width: 50%;
+    margin-left: 20%;
 
 }
 
 
+.recipes{
+ width: 50%;
+}

@@ -4,10 +4,10 @@ import CardWithMenu from "../card/CardWithMenu";
 import TinderCard from "react-tinder-card";
 import Controler from "./Controler";
 import FilterButton from "../buttons/FilterButton";
-import styles from "./controler.module.css";
+import styles from "./swipeContainer.module.css";
 import { addMatch } from "../../features/matchs";
 
-const { positioned, viewStyle } = styles;
+const {viewStyle, controlerAndFilter} = styles;
 
 function SwipeContainer({ menues }) {
   const dispatch = useDispatch();
@@ -71,15 +71,15 @@ function SwipeContainer({ menues }) {
   return (
     <div className={viewStyle} >
       {menues.map((menu, index) => (
-        <div>
+        
 
           <TinderCard
             ref={childRefs[index]}
-            
             key={menu.id}
             onSwipe={(dir) => swiped(dir, menu.menuTitle, index)}
             onCardLeftScreen={() => outOfFrame(menu.menuTitle, index)}
             preventSwipe={["up", " down "]}
+            
           >
             <CardWithMenu
               title={menu.menuTitle}
@@ -88,13 +88,13 @@ function SwipeContainer({ menues }) {
             />
           </TinderCard>
 
-        </div>
-
-
+        
       ))}
 
-        <Controler swipe={swipe} />
+      <div className={controlerAndFilter}>
         <FilterButton />
+        <Controler swipe={swipe} />
+      </div>
     </div>
   );
 }

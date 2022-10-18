@@ -1,11 +1,9 @@
 .responsiveGrid{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-   
-   
-    
-}
+    justify-content: flex-start;
+    flex-wrap: wrap;   
+    width: 100%;
+    }
 
 
 
