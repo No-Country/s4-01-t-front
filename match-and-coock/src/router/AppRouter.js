@@ -13,6 +13,8 @@ import Cover from "../pages/home/cover/Cover";
 import { PrivatesPages } from "./Privates.js/PrivatesPages";
 import { Details } from "../pages/details/Details";
 import { useSelector } from "react-redux";
+import { CreateView } from "../pages/create-edit/CreateView";
+
 // import your route components too
 
 export const AppRouter = () => {
@@ -26,6 +28,8 @@ export const AppRouter = () => {
         <Route path="/" element={<App />}>
           <Route index element={<Home stateSwipe={state} />} />
           <Route path="swipe" element={<SwipeScreen />} />
+          <Route path="create" element={<CreateView />} />
+
           <Route element={<PrivatesPages />}>
             <Route path="matched" element={<MatchedScreen />} />
             <Route path="liked" element={<LikedScreen />} />

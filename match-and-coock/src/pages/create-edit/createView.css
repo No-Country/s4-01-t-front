@@ -1,0 +1,70 @@
+.create-recipe {
+  padding: 2% 5%;
+  font-family: lexend-regular;
+}
+
+.create-recipe h2 {
+  font-family: lexend-bold;
+  margin-bottom: 2rem;
+}
+
+.create-recipe h3 {
+  font-family: lexend-bold;
+  font-size: 16px;
+}
+
+.create-recipe label {
+  font-size: 12px;
+}
+
+.create-recipe button {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.create-recipe input {
+  border: none;
+  padding: 10px;
+  font-size: 13px;
+  background: #f8f8f8;
+  color: #4b4b4b;
+  border-radius: 16px;
+}
+.create-recipe__submit {
+  width: 100%;
+  padding: 13px 24px;
+  background: linear-gradient(
+    91.15deg,
+    #fa7a70 0%,
+    #cb3125 0.01%,
+    #9b241b 99.8%
+  );
+  border: 2px solid rgba(235, 146, 139, 0.47);
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.button-disabled {
+  background: linear-gradient(
+    91.15deg,
+    rgba(250, 122, 112, 0.5) 0%,
+    rgba(203, 49, 37, 0.5) 0.01%,
+    rgba(155, 36, 27, 0.5) 99.8%
+  ) !important;
+}
+
+.create-recipe input[type="text"] {
+  min-width: 320px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.create-recipe__error {
+  color: rgba(216, 49, 49, 0.706);
+  font-size: 12px;
+  min-height: 18px;
+}
+
+.create-recipe .create-recipe--label {
+  font-size: 12px;
+  font-family: lexend-regular;
+}
