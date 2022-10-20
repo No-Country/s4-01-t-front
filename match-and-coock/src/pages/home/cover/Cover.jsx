@@ -24,7 +24,7 @@ const Cover = () => {
           <div id="container">
             <div className="mask-content pb-5">
               <div className="mask-content-top ">
-                <Link to={"/swipe"}>
+                <Link to={-2}>
                   <IconContext.Provider
                     value={{ size: "2rem", color: "#FFFFFF" }}
                   >
