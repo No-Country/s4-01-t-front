@@ -1,10 +1,10 @@
 .card {
   border-radius: 20px;
-  position: absolute;  
+  position: absolute;
   width: 400px;
-  height: 390px;  
+  height: 390px;
   margin: 2%;
-  
+
 }
 
 .tagText {
@@ -40,7 +40,6 @@
   padding: 8px;
   font-family: lexend-bold;
   width: 100%;
-  
   bottom: 0;
   left: 0;
   border-radius: 0 0 20px 20px;
@@ -56,16 +55,18 @@
   font-size: 22px;
 }
 
-.styledImage{
+.styledImage {
   width: 100%;
 }
 
 
 
-@media screen and (max-width: 767px){
-  .card{
-    background-color: blue;
-    width: 320px;
-    height: 330px;
+@media screen and (max-width:391px) {
+  .card {
+    border-radius: 20px;
+    position: absolute;
+    width: 330px;
+    height: 320px;
+    
   }
 }

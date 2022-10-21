@@ -78,8 +78,7 @@ function SwipeContainer({ menues }) {
             key={menu.id}
             onSwipe={(dir) => swiped(dir, menu.menuTitle, index)}
             onCardLeftScreen={() => outOfFrame(menu.menuTitle, index)}
-            preventSwipe={["up", " down "]}
-            
+            preventSwipe={["up", " down "]}            
           >
             <CardWithMenu
               title={menu.menuTitle}

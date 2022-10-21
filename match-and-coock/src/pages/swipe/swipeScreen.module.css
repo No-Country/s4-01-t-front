@@ -1,3 +1,8 @@
+.swipeTitle {
+    margin-left: -25%;
+}
+
+
 .viewTitle {
     margin-left: 2%;
     margin-top: 0.5%;
@@ -21,30 +26,110 @@
     flex-direction: column;
     justify-content: center;
     width: auto;
-    align-self: center
-}
+    margin-top: 12.1%;
 
-.centerContent {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    width: 10%;
 }
-
 
 .rightContent {
-    margin-top: 3%;
+    margin-top: 6.9%;
     display: 'flex';
     flex-direction: row;
     width: 50%;
     margin-left: 20%;
+}
+
+.topButtons {
+    margin-top: 3%;
+}
+
+
+ .botButtonBox{
+    position: absolute;
+    bottom: 5%;
+    left:30%
+} 
+
+@media screen and (max-width: 950px) {    
+
+    .rightContent , .topButtons {
+        visibility: hidden;        
+    }
+
+    .leftContent {
+        width: 100%;
+        margin-left: 50%;
+    }
+
+    .botButtonBox{
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        bottom: 25%;        
+    }
+
+    
 
 }
 
 
-.recipes{
- width: 50%;
+@media screen and (max-width: 1352px){
+    .botButtonBox{
+        position: absolute;
+        bottom:45%
+    }
+}
+@media screen and (max-width: 1440px){
+    .botButtonBox{
+        position: absolute;
+        bottom:8%
+    }
+}
+@media screen and (max-width: 1352px){
+    .botButtonBox{
+        position: absolute;
+        bottom:45%
+    }
+}
+
+
+
+
+@media screen and (max-width:391px) {
+
+    .swipeAndLikes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swipeTitle{
+        margin-left: -2%;
+    }
+
+    .leftContent{
+        width: 100%;
+        margin-left: 0%;
+    }
+
+
+    .topButtons{
+        visibility: visible;
+    }
+
+    .botButtonBox{
+        position: absolute;  
+       
+    }
+}
+
+
+@media screen and (max-width: 950px){
+    .rightContent{
+        visibility: hidden;
+        
+    }
+
+    .botButtonBox{
+        position: absolute;
+        bottom:10%
+    }
 }

@@ -1,31 +1,37 @@
 import React, { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
 import styles from "./swipeScreen.module.css";
 import data from "../../mockMenues.json";
 import SwipeContainer from "../../components/swipeContainer/SwipeContainer";
 import RecipesGrid from '../../components/recipesGrid/RecipesGrid';
-import ButtonsContainer from "../../components/buttons/buttonsContainer/ButtonsContainer";
+import ButtonsContainer from "../../components/buttons/topButtons/ButtonsContainer";
+import BotButton from "../../components/buttons/botButton/BotButton";
 
-const { viewTitle, swipeAndLikes, rightContent, leftContent, centerContent, recipes } = styles;
+
+const { viewTitle, swipeAndLikes, rightContent, swipeTitle, leftContent, topButtons, botButtonBox } = styles;
 
 function SwipeScreen() {
   const { menues } = data;
 
   return (
     <div className={swipeAndLikes}>
+      
 
-      <div>
-        <div>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+
+
+        <div className={topButtons}>
           <ButtonsContainer />
         </div>
 
-        <div >
-          <h2 className={viewTitle}>Deslizá y matcheá</h2>
+        <div className={leftContent}>
+          <h2 className={swipeTitle} >Deslizá y matcheá</h2>
           <SwipeContainer menues={menues} />
         </div>
 
+        <div className={botButtonBox}>
+          <BotButton />
+        </div>
       </div>
-
 
       <div className={rightContent}>
         <h2 className={viewTitle}>Tus recetas matcheadas</h2>

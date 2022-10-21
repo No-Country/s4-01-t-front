@@ -1,7 +1,8 @@
 .controler {
     display: flex;
     justify-content: center;   
-     
+    width: 100%;
+       
 }
 
 .redCircle {
@@ -10,8 +11,7 @@
     justify-content: center;
     border-radius: 50%;
     width: 76px;
-    height: 76px;
-    
+    height: 76px;    
     background: linear-gradient(133.32deg, #CB3125 8.25%, #9B241B 86.94%);
 
 }
@@ -29,8 +29,20 @@
 }
 
 
-.positioned{
-    position: absolute;  
-}
+ @media screen and (max-width: 768px){
+    .controler{
+        width: max-content;
+        margin-left: 30%;
+    }
+} 
+ @media screen and (max-width: 391px){
+    .controler{
+        width: 100%;
+        margin-left: 0;
+        
+    }
+} 
+
+
 
 
