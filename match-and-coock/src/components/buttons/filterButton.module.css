@@ -16,7 +16,31 @@
     margin-top: 4%; 
     margin-bottom: 5%; 
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    position: absolute;
-    top: 60%;
-        
+    top: 60%;        
+}
+
+
+@media screen and (max-width: 1550px){
+    .filterButton{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .filterButton{
+        visibility: visible;
+    }
+}
+@media screen and (max-width: 768px){
+    .filterButton{
+        visibility: visible;
+        margin-left: 45%;
+    }
+}
+@media screen and (max-width: 391px){
+    .filterButton{
+        visibility: visible;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

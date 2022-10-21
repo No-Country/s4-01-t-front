@@ -13,12 +13,13 @@ const {
   tagAndTimeContainer,
   menuInfo,
   menuTitle,
+  styledImage
 } = styles;
 
 function CardWithMenu(props) {
   return (
     <div className={card}>
-      <Image src={MenuImg} />
+      <Image src={MenuImg} className={styledImage} />
       <div className={menuInfo}>
         <h4 className={menuTitle}>{props.title}</h4>
         <div className={tagAndTimeContainer}>
