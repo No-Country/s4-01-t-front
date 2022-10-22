@@ -1,0 +1,28 @@
+{
+    "liked": [
+        {
+            "menuTitle": "Asado",
+            "menuType": "Salado",
+            "time": "85",
+            "id": 7
+        },
+        {
+            "menuTitle": "jamon",
+            "menuType": "Vegetariano",
+            "time": "64",
+            "id": 8
+        },
+        {
+            "menuTitle": "tortilla",
+            "menuType": "Salado",
+            "time": "63",
+            "id": 9
+        },
+        {
+            "menuTitle": "fideos",
+            "menuType": "Sin TACC",
+            "time": "120",
+            "id": 10
+        }
+    ]
+}

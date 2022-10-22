@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import Like from "../../assets/Controler/Vector.png";
 import NotLike from "../../assets/Controler/plus.png";

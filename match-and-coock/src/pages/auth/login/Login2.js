@@ -55,19 +55,17 @@ export const Login2 = () => {
   };
 
   const handleLogin = () => {
-    setState({
+    /*    setState({
       ...state,
       successful: false,
-    });
+    }); */
 
     dispatch(loginAction(state.email, state.password, getStatus));
 
-    if (state.successful) {
+    /*  if (state.successful) {
       redirect("/home");
-    }
+    } */
   };
-
-  console.log(state);
 
   return (
     <div className="layout">

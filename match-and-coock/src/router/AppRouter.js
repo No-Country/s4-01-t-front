@@ -11,10 +11,10 @@ import { Login2 } from "../pages/auth/login/Login2";
 import { Register2 } from "../pages/auth/register/Register2";
 import Cover from "../pages/home/cover/Cover";
 import { PrivatesPages } from "./Privates.js/PrivatesPages";
-import { Details } from "../pages/details/Details";
 import { useSelector } from "react-redux";
 import { CreateView } from "../pages/create-edit/CreateView";
 import { Edite_recipe } from "../pages/edite_recipe/Edite_recipe";
+import { Details } from "../pages/details/Details";
 
 export const AppRouter = () => {
   const { loading, state } = useFetch("/food");
@@ -24,18 +24,19 @@ export const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Home stateSwipe={state} />} />
+          <Route index element={<Home logged={user} stateSwipe={state} />} />
           <Route path="swipe" element={<SwipeScreen />} />
-          <Route path="create" element={<CreateView />} />
-          <Route path="edite/:id" element={<Edite_recipe />} />
 
           <Route element={<PrivatesPages />}>
+            <Route path="create" element={<CreateView />} />
+            <Route path="detail" element={<Details />} />
             <Route path="matched" element={<MatchedScreen />} />
             <Route path="liked" element={<LikedScreen />} />
+            <Route path="edite/:id" element={<Edite_recipe />} />
           </Route>
           <Route
             path="auth/*"
-            element={user === null ? <Auth /> : <Navigate replace to={"/"} />}
+            element={user === null ? <Auth /> : <Navigate to={-1} />}
           >
             <Route index element={<Cover />} />
             <Route path="login" element={<Login2 />} />
@@ -43,9 +44,6 @@ export const AppRouter = () => {
             <Route path="*" element={<Navigate to={-1} />} />
           </Route>
           <Route path="help" element={<HelpScreen />} />
-          <Route path="details" element={<Details />} />
-
-          <Route path="*" element={<Navigate to={-1} />} />
         </Route>
       </Routes>
     </BrowserRouter>

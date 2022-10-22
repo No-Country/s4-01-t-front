@@ -9,12 +9,22 @@ import "swiper/css/bundle";
 import styles from "./slider.module.css";
 
 // import required modules
-import { Pagination } from "swiper";
 
-const { slider, slide, img, info } = styles;
+import { Link } from "react-router-dom";
+import Clock from "../../assets/Outline.png";
+
+const {
+  slider,
+  slide,
+  img,
+  info,
+  home_navigate,
+  infoCards,
+  info_dietType,
+  time_card,
+} = styles;
 
 export const Slider = ({ data }) => {
-  console.log(data);
   return (
     <Swiper
       slidesPerView={"auto"}
@@ -23,23 +33,54 @@ export const Slider = ({ data }) => {
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
       className={slider}
       preloadImages={false}
       lazy={true}
       loop={true}
       preventClicks={true}
     >
-      {data.map((el) => {
-        return (
-          <SwiperSlide key={el.id} className={slide}>
-            <img src={el.image} alt="food" className={img + " swiper-lazy"} />
-            <div className={info}>
-              <p>{el.name}</p>
-            </div>
-          </SwiperSlide>
-        );
-      })}
+      {data.map(
+        ({
+          RecipeTitle,
+          DietType,
+          PreparationTime,
+          RecipeId,
+          RecipePicturePath,
+        }) => {
+          return (
+            <SwiperSlide key={RecipeId} className={slide}>
+              <Link to={"/detail"} state={RecipeId} className={home_navigate}>
+                <img
+                  src={RecipePicturePath}
+                  alt="food"
+                  className={img + " swiper-lazy"}
+                />
+                <div className={info}>
+                  <p>{RecipeTitle}</p>
+                  <div className={infoCards}>
+                    <div>
+                      {DietType.map((el, i) => {
+                        if (i < 2) {
+                          return (
+                            <p className={info_dietType} key={el}>
+                              {el}
+                            </p>
+                          );
+                        }
+                      })}
+                    </div>
+                    <div className={time_card}>
+                      {" "}
+                      <img src={Clock} alt="clock" />
+                      {PreparationTime}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
+          );
+        }
+      )}
     </Swiper>
   );
 };

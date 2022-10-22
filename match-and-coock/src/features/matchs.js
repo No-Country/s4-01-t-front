@@ -27,9 +27,9 @@ export const { addMatch, remove } = matchSlice.actions;
 
 //HAY QUE VER SI ACTUALIZAMOS REDUX CON LA LISTA ACTUALIZADA QUE DEVUELVE EL BACK O SIMPLEMENTE PUSHEAMOS AL ESTADO LA RECETA NUEVA, YA QUE NO HABRÍA DIFERENCIA. (capaz mejor pushear de a una, pero vemos)
 
-export const addMatchAction = (id_user, id_receta) => (dispatch) => {
+export const addMatchAction = (AppUserId, RecipeId) => (dispatch) => {
   instance
-    .post("/addFav", { id_user, id_receta })
+    .post("/addFav", { AppUserId, RecipeId })
     .then(({ data }) => {
       //Recibimos la lista actualizada
       dispatch(addMatch(data));
@@ -37,8 +37,8 @@ export const addMatchAction = (id_user, id_receta) => (dispatch) => {
     .catch((err) => console.error(err));
 };
 
-export const removeMatchAction = (id_user, id_receta) => (dispatch) => {
-  instance.put("/recetas", { id_user, id_receta }).then(({ data }) => {
+export const removeMatchAction = (AppUserId, RecipeId) => (dispatch) => {
+  instance.put("/recetas", { AppUserId, RecipeId }).then(({ data }) => {
     dispatch(remove(data));
     //Recibimos las lista actualizada
   });

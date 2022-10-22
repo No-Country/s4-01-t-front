@@ -15,7 +15,6 @@ import { validation } from "./validation";
 export const FormComponent = ({ initialValues, method }) => {
   const user = useSelector((state) => state.auth);
   const navigate = useNavigate();
-  const changeNavigate = () => navigate("/");
 
   /* const handle = (e) => {
     setImg(URL.createObjectURL(e.target.files[0]));
@@ -24,6 +23,10 @@ export const FormComponent = ({ initialValues, method }) => {
     setfirst(formData.get("fileupload"));
   };
  */
+
+  const toNumber = (str) =>
+    typeof str === "object" ? str.map((el) => Number(el)) : Number(str);
+
   return (
     <Formik
       initialValues={initialValues}
@@ -40,7 +43,18 @@ export const FormComponent = ({ initialValues, method }) => {
         RecipeSteps,
       }) => {
         createAlert(navigate);
-        try {
+        console.log({
+          PreparationTime: time,
+          RecipeTitle: title,
+          Ingredients,
+          Recipe_DietTypes: toNumber(type),
+          Recipe_TimesOfDay: toNumber(moment),
+          RecipePicturePath: file,
+          RecipeSteps,
+          DifficultyLevelId: toNumber(difficulty),
+          FlavorId: toNumber(flavors),
+        });
+        /*  try {
           method("/create", {
             PreparationTime: time,
             RecipeTitle: title,
@@ -51,11 +65,11 @@ export const FormComponent = ({ initialValues, method }) => {
             RecipeSteps,
             DifficultyLevelId: difficulty,
             FlavorId: flavors,
-            AppUserId: user.id,
+             AppUserId: user.id,
           });
         } catch (error) {
           console.error(error);
-        }
+        } */
       }}
     >
       {({ values, errors, setFieldValue }) => (
@@ -137,7 +151,7 @@ export const FormComponent = ({ initialValues, method }) => {
             </div>
           </article>
 
-          <MomentDay errors={errors} />
+          <MomentDay values={values} errors={errors} />
           <Difficulty errors={errors} />
           <Flavors errors={errors} />
           <Type_food errors={errors} />

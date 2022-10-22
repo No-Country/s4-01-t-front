@@ -6,15 +6,15 @@ export const Flavors = ({ errors }) => {
     <article role="group" aria-labelledby="my-radio-group">
       <h3>Sabores</h3>
       <label className="radio-label">
-        <Field type="radio" name="flavors" value="Dulce" />
+        <Field type="radio" name="flavors" value="1" />
         Dulce
       </label>
       <label className="radio-label">
-        <Field type="radio" name="flavors" value="Agridulce" />
+        <Field type="radio" name="flavors" value="3" />
         Agridulce
       </label>
       <label className="radio-label">
-        <Field type="radio" name="flavors" value="Salado" />
+        <Field type="radio" name="flavors" value="2" />
         Salado
       </label>
       <div className="create-recipe__error">

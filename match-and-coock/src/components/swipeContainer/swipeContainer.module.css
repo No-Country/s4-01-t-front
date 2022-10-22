@@ -1,0 +1,24 @@
+.controlerAndFilter{
+    width: 100%;
+    position: absolute;
+    top:400px;
+    left: 25%
+}
+
+.viewStyle{
+    position: relative;
+}
+
+
+@media screen and (max-width: 391){
+    .controlerAndFilter{
+        width: 50%;
+        margin-left: 25%;
+        
+}}
+
+@media screen and (max-width: 768){
+    .controlerAndFilter{
+        position: absolute;
+        left: 50%;
+}}

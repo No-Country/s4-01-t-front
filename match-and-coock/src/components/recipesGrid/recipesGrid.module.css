@@ -1,7 +1,9 @@
-.responsiveGrid {
-    display: 'flex';
-    flex-wrap: 'wrap';
-    justify-content: 'space-around';
-    margin-top: 5%;
-    margin-left: 2.5%;
-}
+.responsiveGrid{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;   
+    width: 100%;
+    }
+
+
+

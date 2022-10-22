@@ -1,6 +1,7 @@
 .checkbox-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 160px);
+  justify-content: space-between;
 }
 
 .checkbox-container__label {

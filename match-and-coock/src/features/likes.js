@@ -20,20 +20,20 @@ const likesSlice = createSlice({
 
 export const { add, remove, get } = likesSlice.actions;
 
-export const addLikeAction = (id_user, id_recipe) => (dispatch) => {
+export const addLikeAction = (AppUserId, RecipeId) => (dispatch) => {
   instance
-    .post("/likes", { id_user, id_recipe })
+    .post("/likes", { AppUserId, RecipeId })
     .then(({ data }) => {
-      dispatch(add(id_recipe));
+      dispatch(add(RecipeId));
     })
     .catch((err) => console.error(err));
 };
 
-export const removeLikeAction = (id_user, id_recipe) => (dispatch) => {
+export const removeLikeAction = (AppUserId, RecipeId) => (dispatch) => {
   instance
-    .put("/likes", { id_user, id_recipe })
+    .put("/likes", { AppUserId, RecipeId })
     .then(({ data }) => {
-      dispatch(remove(id_recipe));
+      dispatch(remove(RecipeId));
     })
     .catch((err) => console.error(err));
 };

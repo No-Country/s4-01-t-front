@@ -16,11 +16,11 @@ const {
 } = style;
 
 export const Header = ({
-  img,
-  title,
-  type_recipe,
-  difficulty,
-  preparation_time,
+  RecipePicturePath,
+  RecipeTitle,
+  DietTypes,
+  DifficultyLevelDescription,
+  PreparationTime,
 }) => {
   function difficultRename(text) {
     let name = text.toLowerCase();
@@ -32,22 +32,28 @@ export const Header = ({
 
   return (
     <header className={header}>
-      <img className={img_recipe} src={img} alt="recipe" />
+      <img className={img_recipe} src={RecipePicturePath} alt="recipe" />
       <div className={resume_container}>
-        <h2>{title}</h2>
+        <h2>{RecipeTitle}</h2>
         <div className={recipe_resume}>
-          <p className={recipe_type}>{type_recipe}</p>
+          {DietTypes.map((el) => (
+            <p key={el} className={recipe_type}>
+              {el}
+            </p>
+          ))}
+
           <p className={recipe_difficulty}>
             <span>
               <img src={Flame} alt="flame" />
             </span>
-            Dificultad:<span> {difficultRename(difficulty)}</span>
+            Dificultad:
+            <span> {difficultRename(DifficultyLevelDescription)}</span>
           </p>
           <p>
             <span>
               <img src={Timer} alt="clock" />
             </span>
-            {preparation_time}'
+            {PreparationTime}'
           </p>
         </div>
       </div>

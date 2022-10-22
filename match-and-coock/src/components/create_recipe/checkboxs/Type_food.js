@@ -7,15 +7,15 @@ export const Type_food = ({ errors }) => {
     <article>
       <h3>Tipo de Alimentación</h3>
       <div className="checkbox-container">
-        {types_food.map((type) => (
-          <label className="checkbox-container__label" key={type}>
+        {types_food.map(({ name, id }) => (
+          <label className="checkbox-container__label" key={name}>
             <Field
               type="checkbox"
               name="type"
-              value={type}
+              value={id}
               className="checkbox-container__input"
             />
-            {type}
+            {name}
           </label>
         ))}
       </div>
