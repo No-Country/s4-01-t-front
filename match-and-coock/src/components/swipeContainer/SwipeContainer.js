@@ -6,6 +6,7 @@ import Controler from "./Controler";
 import FilterButton from "../buttons/FilterButton";
 import styles from "./controler.module.css";
 import { addMatch } from "../../features/matchs";
+import ModalDialog from "../ModalDialog/ModalDialog";
 
 const { positioned, viewStyle } = styles;
 
@@ -90,7 +91,8 @@ function SwipeContainer({ menues }) {
         </>
       ))}
 
-      <FilterButton />
+      {/* <FilterButton /> */}
+        <ModalDialog />
     </div>
   );
 }

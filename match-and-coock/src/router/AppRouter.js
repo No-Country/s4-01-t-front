@@ -16,7 +16,7 @@ import { useSelector } from "react-redux";
 // import your route components too
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
-
+import ModalDialog from "../components/ModalDialog/ModalDialog";
 
 export const AppRouter = () => {
   const { loading, state } = useFetch("/food");
@@ -25,7 +25,7 @@ export const AppRouter = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
+     <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home stateSwipe={state} />} />
           <Route path="swipe" element={<SwipeScreen />} />
@@ -46,7 +46,9 @@ export const AppRouter = () => {
           <Route path="cover" element={<Cover />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="modalDialog" element={<ModalDialog/>} />
         </Route>
+        
       </Routes>
     </BrowserRouter>
   );

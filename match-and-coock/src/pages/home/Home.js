@@ -20,7 +20,7 @@ const {
 
 export const Home = ({ stateSwipe, loadingSwipe }) => {
   // const [user, setUser] = useState(null);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({'nombre':'Isa'});
   // Enviar el usuario para loguear
   const handdleLogin = () => {
     setUser({'nombre':'Isa'});
