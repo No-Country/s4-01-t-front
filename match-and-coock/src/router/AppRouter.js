@@ -14,13 +14,11 @@ import { PrivatesPages } from "./Privates.js/PrivatesPages";
 import { Details } from "../pages/details/Details";
 import { useSelector } from "react-redux";
 import { CreateView } from "../pages/create-edit/CreateView";
-
-// import your route components too
+import { Edite_recipe } from "../pages/edite_recipe/Edite_recipe";
 
 export const AppRouter = () => {
   const { loading, state } = useFetch("/food");
   const user = useSelector((state) => state.auth);
-  console.log(user);
 
   return (
     <BrowserRouter>
@@ -29,6 +27,7 @@ export const AppRouter = () => {
           <Route index element={<Home stateSwipe={state} />} />
           <Route path="swipe" element={<SwipeScreen />} />
           <Route path="create" element={<CreateView />} />
+          <Route path="edite/:id" element={<Edite_recipe />} />
 
           <Route element={<PrivatesPages />}>
             <Route path="matched" element={<MatchedScreen />} />

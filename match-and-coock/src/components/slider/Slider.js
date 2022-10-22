@@ -14,6 +14,7 @@ import { Pagination } from "swiper";
 const { slider, slide, img, info } = styles;
 
 export const Slider = ({ data }) => {
+  console.log(data);
   return (
     <Swiper
       slidesPerView={"auto"}

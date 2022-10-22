@@ -53,7 +53,7 @@
 }
 
 .create-recipe input[type="text"] {
-  min-width: 320px;
+  min-width: 300px;
   width: 100%;
   max-width: 500px;
 }

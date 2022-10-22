@@ -13,7 +13,7 @@ export const ImagePreview = ({ file }) => {
 
   return (
     <div>
-      <img src={preview} alt="recipe" className="preview" />
+      {preview && <img src={preview} alt="recipe" className="preview" />}
     </div>
   );
 };

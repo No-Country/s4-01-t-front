@@ -18,3 +18,19 @@
   font-family: "lexend-bold";
   src: url("./fonts/Lexend-Bold.ttf");
 }
+
+.swal2-actions {
+  width: 80% !important;
+}
+
+.create-alert_btn {
+  display: block !important;
+  min-width: 100%;
+
+  background: linear-gradient(
+    91.15deg,
+    #fa7a70 0%,
+    #cb3125 0.01%,
+    #9b241b 99.8%
+  ) !important;
+}
